@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
+
+:root {
+ --body-bgc: hsl(30, 38%, 92%);
+ --span-font-color: hsl(158, 36%, 37%);
+ --h2-color: hsl(212, 21%, 14%);
+ --h1-and-par-color: hsl(228, 12%, 48%);
+ --main-color: hsl(0, 0%, 100%);
+}
+
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+
+body {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ font-family: "Montserrat", sans-serif;
+ background-color: var(--body-bgc);
+ font-size: 14px;
+ height: 100%;
+}
+
+main {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ background-color: var(--main-color);
+ border-radius: 0.5rem;
+ overflow: hidden;
+ margin: 1rem;
+}
+
+.image {
+ display: block;
+ background-image: url(./images/image-product-mobile.jpg);
+ background-repeat: no-repeat;
+ background-position: center;
+ background-size: cover;
+ height: 21rem;
+}
+
+section {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-around;
+ padding: 1rem 0;
+}
+
+section > * {
+ margin: 1rem;
+}
+
+h1 {
+ text-transform: uppercase;
+ letter-spacing: 0.25rem;
+ font-size: 1rem;
+ color: var(--h1-and-par-color);
+}
+
+h2 {
+ font-size: 2rem;
+ font-family: fraunces;
+ color: var(--h2-color);
+}
+
+p {
+ font-size: 0.875rem;
+ color: var(--h1-and-par-color);
+}
+
+.cost {
+ text-decoration: line-through;
+ height: 2rem;
+}
+
+span {
+ display: inline-block;
+ font-size: 2rem;
+ color: var(--span-font-color);
+ text-decoration: none;
+ font-family: fraunces;
+ margin-right: 1rem;
+}
+
+button {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ font-size: 1rem;
+ color: #fff;
+ height: 3rem;
+ background-color: var(--span-font-color);
+ border: none;
+ border-radius: 0.5rem;
+}
+
+button:hover {
+ background-color: var(--h1-and-par-color);
+ cursor: pointer;
+}
+
+.material-symbols-outlined {
+ color: hsl(0, 0%, 100%);
+ font-size: 1.25rem;
+ margin-right: 0.5rem;
+}
+
+@media (width >=500px) {
+ body {
+  height: 100vh;
+ }
+ main {
+  flex-direction: row;
+ }
+
+ .image {
+  display: block;
+  background-image: url(./images/image-product-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  flex: 1 1 50%;
+  height: 100%;
+ }
+
+ section {
+  flex: 1 1 50%;
+ }
+}
